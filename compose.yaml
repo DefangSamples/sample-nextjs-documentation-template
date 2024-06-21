@@ -1,0 +1,12 @@
+services:
+  documentstarter:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - mode: ingress
+        target: 3000
+    deploy:
+      resources:
+        reservations:
+          memory: 1GB
